@@ -5,11 +5,11 @@ import android.util.Log
 import org.json.JSONException
 import org.json.JSONObject
 
-class GetFlickrJsonData (private val listener: OnDAtaAvailable) : AsyncTask<String, Void, ArrayList<Photo>>() {
+class GetFlickrJsonData (private val listener: OnDataAvailable) : AsyncTask<String, Void, ArrayList<Photo>>() {
 
     private val TAG = "GetFlickrJsonData"
 
-    interface OnDAtaAvailable{
+    interface OnDataAvailable{
         fun onDataAvailable (data: List<Photo>)
         fun onError(exception: Exception)
     }
