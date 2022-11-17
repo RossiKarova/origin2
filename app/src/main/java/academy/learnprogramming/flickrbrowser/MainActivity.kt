@@ -7,7 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(), GetRawData.OnDownloadComplete {
+class MainActivity : AppCompatActivity(), GetRawData.OnDownloadComplete, GetFlickrJsonData.OnDAtaAvailable {
     private val TAG = "MainActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,9 +46,24 @@ class MainActivity : AppCompatActivity(), GetRawData.OnDownloadComplete {
 
     override fun onDownloadComplete (data: String, status: DownloadStatus) {
         if ( status == DownloadStatus.OK) {
-            Log.d(TAG, "onDownloadComplete called, data is $data")
+            Log.d(TAG, "onDownloadComplete called")
+
+            val getFlickrJsonData = GetFlickrJsonData(this)
+            getFlickrJsonData.execute(data)
         } else {
             Log.d(TAG, "onDownloadComplete failed with status $status. Error message is :$data")
         }
+    }
+
+    override fun onDataAvailable(data: List<Photo>) {
+        Log.d(TAG,".onDataAvailable called, data is $data")
+
+
+        Log.d(TAG,".onDataAvailable ends, data is $data")
+    }
+
+    override fun onError(exception: Exception) {
+        Log.e(TAG, "onError called with ${exception.message} ")
+
     }
 }
