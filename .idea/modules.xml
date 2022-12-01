@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson_150.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson_150.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/lesson_150.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/lesson_150.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/lesson_150.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/lesson_150.app.androidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/lesson_150.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/lesson_150.app.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/lesson_150.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/lesson_150.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FlickrBrowser.iml" filepath="$PROJECT_DIR$/.idea/modules/FlickrBrowser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FlickrBrowser.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FlickrBrowser.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FlickrBrowser.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FlickrBrowser.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FlickrBrowser.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FlickrBrowser.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FlickrBrowser.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FlickrBrowser.app.unitTest.iml" />
     </modules>
   </component>
 </project>

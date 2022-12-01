@@ -13,5 +13,4 @@ class SearchActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
-
 }
