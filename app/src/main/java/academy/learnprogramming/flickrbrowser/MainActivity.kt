@@ -38,12 +38,12 @@ class MainActivity : AppCompatActivity(), GetRawData.OnDownloadComplete,
 
     override fun onItemClick(view: View, position: Int) {
         Log.d(TAG, ".onItemClick starts")
-        Toast.makeText(this, "Normal tap at position $position", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "Normal tap at position $position", Toast.LENGTH_SHORT).show()
     }
 
     override fun onItemLongClick(view: View, position: Int) {
         Log.d(TAG, ".onItemLongClick starts")
-        Toast.makeText(this, "Long tap at position $position", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "Long tap at position $position", Toast.LENGTH_SHORT).show()
     }
 
     private fun createUri(baseURL: String, searchCriteria: String, lang: String, matchAll: Boolean): String {
