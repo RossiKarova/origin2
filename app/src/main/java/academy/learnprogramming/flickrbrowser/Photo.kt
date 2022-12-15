@@ -4,7 +4,6 @@ import android.util.Log
 import java.io.IOException
 import java.io.ObjectStreamException
 import java.io.Serializable
-import java.util.*
 
 /**
  * Created by timbuchalka for Android Oreo with Kotlin course
