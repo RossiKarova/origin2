@@ -8,7 +8,7 @@ import androidx.appcompat.widget.Toolbar
 internal const val FLICKR_QUERY = "FLICKR_QUERY"
 internal const val PHOTO_TRANSFER = "PHOTO_TRANSFER"
 
-class BaseActivity : AppCompatActivity() {
+open class BaseActivity : AppCompatActivity() {
     private val TAG = "BaseActivity"
 
     internal fun activateToolBar(enableHome: Boolean) {
