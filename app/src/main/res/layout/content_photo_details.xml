@@ -27,34 +27,52 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
+<<<<<<< HEAD
                 android:textColor="#4E342E"
                 tools:text="TextView" />
+=======
+                android:text="TextView"/>
+>>>>>>> e6e072bfe9680f8a298294b094213d25589d5f08
 
             <ImageView
                 android:id="@+id/photo_image"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
+<<<<<<< HEAD
                 android:contentDescription="@string/browse_image_dscription"
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/placeholder" />
+=======
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/placeholder"/>
+>>>>>>> e6e072bfe9680f8a298294b094213d25589d5f08
 
             <TextView
                 android:id="@+id/photo_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
+<<<<<<< HEAD
                 android:textColor="#4E342E"
                 tools:text="TextView" />
+=======
+                android:text="TextView"/>
+>>>>>>> e6e072bfe9680f8a298294b094213d25589d5f08
 
             <TextView
                 android:id="@+id/photo_tags"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
+<<<<<<< HEAD
                 android:textColor="#4E342E"
                 android:textSize="12sp"
                 tools:text="TextView" />
+=======
+                android:text="TextView"
+                android:textSize="12sp"/>
+>>>>>>> e6e072bfe9680f8a298294b094213d25589d5f08
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </ScrollView>

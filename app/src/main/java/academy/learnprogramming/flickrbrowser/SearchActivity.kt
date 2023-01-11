@@ -1,5 +1,6 @@
 package academy.learnprogramming.flickrbrowser
 
+<<<<<<< HEAD
 import android.app.SearchManager
 import android.content.Context
 import android.os.Bundle
@@ -12,6 +13,15 @@ import kotlinx.android.synthetic.main.activity_search.*
 class SearchActivity : BaseActivity() {
     private val TAG = "SearchActivity"
     private var searchView: SearchView? = null
+=======
+import android.os.Bundle
+import android.util.Log
+import kotlinx.android.synthetic.main.activity_search.*
+
+class SearchActivity : BaseActivity() {
+
+    private val TAG = "SearchActivity"
+>>>>>>> e6e072bfe9680f8a298294b094213d25589d5f08
 
     override fun onCreate(savedInstanceState: Bundle?) {
         Log.d(TAG, ".onCreate: starts")
@@ -20,6 +30,7 @@ class SearchActivity : BaseActivity() {
         activateToolBar(true)
         Log.d(TAG, ".onCreate: ends")
     }
+<<<<<<< HEAD
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         Log.d(TAG, ".onCreateOptionsMenu: starts")
@@ -57,4 +68,6 @@ class SearchActivity : BaseActivity() {
         Log.d(TAG, ".onCreateOptionsMenu: return")
         return true
     }
+=======
+>>>>>>> e6e072bfe9680f8a298294b094213d25589d5f08
 }

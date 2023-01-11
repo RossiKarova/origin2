@@ -13,6 +13,7 @@ class PhotoDetailsActivity : BaseActivity() {
         activateToolBar(true)
 
         val photo = intent.getSerializableExtra(PHOTO_TRANSFER) as Photo
+<<<<<<< HEAD
 
 //        photo_title.text = "Title" + photo.title
 //        photo_tags.text = "Tags" + photo.tags
@@ -22,6 +23,12 @@ class PhotoDetailsActivity : BaseActivity() {
         photo_author.text = photo.author
 
 
+=======
+        photo_title.text = photo.title
+        photo_tags.text = photo.tags
+        photo_author.text = photo.author
+
+>>>>>>> e6e072bfe9680f8a298294b094213d25589d5f08
         Picasso.with(this).load(photo.link)
             .error(R.drawable.placeholder)
             .placeholder(R.drawable.placeholder)

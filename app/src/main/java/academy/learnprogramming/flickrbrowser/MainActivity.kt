@@ -9,7 +9,10 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+<<<<<<< HEAD
 import androidx.preference.PreferenceManager
+=======
+>>>>>>> e6e072bfe9680f8a298294b094213d25589d5f08
 import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : BaseActivity(), GetRawData.OnDownloadComplete,
@@ -29,6 +32,13 @@ class MainActivity : BaseActivity(), GetRawData.OnDownloadComplete,
         recycler_view.addOnItemTouchListener(RecyclerItemClickListener(this, recycler_view, this))
         recycler_view.adapter = flickrRecyclerViewAdapter
 
+<<<<<<< HEAD
+=======
+        val url = createUri("https://api.flickr.com/services/feeds/photos_public.gne", "android,oreo","en-us", true)
+        val getRawData = GetRawData(this)
+        getRawData.execute(url)
+
+>>>>>>> e6e072bfe9680f8a298294b094213d25589d5f08
         Log.d(TAG, "onCreate ends")
     }
 
@@ -73,10 +83,14 @@ class MainActivity : BaseActivity(), GetRawData.OnDownloadComplete,
         // as you specify a parent activity in AndroidManifest.xml.
         Log.d(TAG, "onOptionsItemSelected called")
         return when (item.itemId) {
+<<<<<<< HEAD
             R.id.action_search -> {
                 startActivity(Intent(this, SearchActivity::class.java))
                 true
             }
+=======
+            R.id.action_settings -> true
+>>>>>>> e6e072bfe9680f8a298294b094213d25589d5f08
             else -> super.onOptionsItemSelected(item)
         }
     }
@@ -106,6 +120,7 @@ class MainActivity : BaseActivity(), GetRawData.OnDownloadComplete,
     override fun onError(exception: Exception) {
         Log.e(TAG, "onError called with ${exception.message}")
     }
+<<<<<<< HEAD
 
     override fun onResume() {
         Log.d(TAG, "onResume starts")
@@ -121,4 +136,6 @@ class MainActivity : BaseActivity(), GetRawData.OnDownloadComplete,
         }
         Log.d(TAG, ".onResume: ends")
     }
+=======
+>>>>>>> e6e072bfe9680f8a298294b094213d25589d5f08
 }
