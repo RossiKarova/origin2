@@ -18,7 +18,7 @@ class GetFlickrJsonData(private val listener: OnDataAvailable) : AsyncTask<Strin
         fun onError(exception: Exception)
     }
 
-    override fun doInBackground(vararg params: String?): ArrayList<Photo> {
+    override fun doInBackground(vararg params: String): ArrayList<Photo> {
         Log.d(TAG, "doInBackground starts")
 
         val photoList = ArrayList<Photo>()

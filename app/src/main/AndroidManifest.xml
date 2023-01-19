@@ -29,15 +29,12 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="academy.learnprogramming.flickrbrowser.MainActivity"/>
-<<<<<<< HEAD
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH"/>
             </intent-filter>
             <meta-data android:name="android.app.searchable"
                 android:resource="@xml/searchable"/>
 
-=======
->>>>>>> e6e072bfe9680f8a298294b094213d25589d5f08
         </activity>
         <activity
             android:name=".PhotoDetailsActivity"

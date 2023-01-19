@@ -1,6 +1,5 @@
 package academy.learnprogramming.flickrbrowser
 
-<<<<<<< HEAD
 import android.app.SearchManager
 import android.content.Context
 import android.os.Bundle
@@ -8,20 +7,10 @@ import android.preference.PreferenceManager
 import android.util.Log
 import android.view.Menu
 import android.widget.SearchView
-import kotlinx.android.synthetic.main.activity_search.*
 
 class SearchActivity : BaseActivity() {
     private val TAG = "SearchActivity"
     private var searchView: SearchView? = null
-=======
-import android.os.Bundle
-import android.util.Log
-import kotlinx.android.synthetic.main.activity_search.*
-
-class SearchActivity : BaseActivity() {
-
-    private val TAG = "SearchActivity"
->>>>>>> e6e072bfe9680f8a298294b094213d25589d5f08
 
     override fun onCreate(savedInstanceState: Bundle?) {
         Log.d(TAG, ".onCreate: starts")
@@ -30,7 +19,6 @@ class SearchActivity : BaseActivity() {
         activateToolBar(true)
         Log.d(TAG, ".onCreate: ends")
     }
-<<<<<<< HEAD
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         Log.d(TAG, ".onCreateOptionsMenu: starts")
@@ -46,9 +34,10 @@ class SearchActivity : BaseActivity() {
 
         searchView?.isIconified = false
 
-        searchView?.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
+        searchView?.setOnQueryTextListener(object: SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 Log.d(TAG, ".onQueryTextSubmit: called")
+
                 val sharedPref = PreferenceManager.getDefaultSharedPreferences(applicationContext)
                 sharedPref.edit().putString(FLICKR_QUERY, query).apply()
                 searchView?.clearFocus()
@@ -56,7 +45,8 @@ class SearchActivity : BaseActivity() {
                 finish()
                 return true
             }
-            override fun onQueryTextChange(p0: String?): Boolean {
+
+            override fun onQueryTextChange(newText: String?): Boolean {
                 return false
             }
         })
@@ -65,9 +55,8 @@ class SearchActivity : BaseActivity() {
             finish()
             false
         }
-        Log.d(TAG, ".onCreateOptionsMenu: return")
+
+        Log.d(TAG, ".onCreateOptionsMenu: returning")
         return true
     }
-=======
->>>>>>> e6e072bfe9680f8a298294b094213d25589d5f08
 }

@@ -3,14 +3,11 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_search">SearchActivity</string>
     <string name="title_activity_photo_details">Photo Details</string>
-<<<<<<< HEAD
-    <string name="browse_image_dscription">Downloaded flickr photo</string>
+    <string name="browse_image_description">Downloaded flickr photo</string>
     <string name="photo_title_text">Title: %s</string>
     <string name="photo_tags_text">Tags: %s</string>
     <string name="action_search">Search</string>
     <string name="search">Search</string>
     <string name="searchable_hint">Enter photo tags</string>
     <string name="empty_photo">No photos match your search.\n\nUse the search icon to search for photos</string>
-=======
->>>>>>> e6e072bfe9680f8a298294b094213d25589d5f08
 </resources>

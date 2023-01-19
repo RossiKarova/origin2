@@ -3,21 +3,19 @@ package academy.learnprogramming.flickrbrowser
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
-<<<<<<< HEAD
-import androidx.preference.PreferenceManager
-=======
->>>>>>> e6e072bfe9680f8a298294b094213d25589d5f08
 import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : BaseActivity(), GetRawData.OnDownloadComplete,
-    GetFlickrJsonData.OnDataAvailable,
-    RecyclerItemClickListener.OnRecyclerClickListener {
+        GetFlickrJsonData.OnDataAvailable,
+        RecyclerItemClickListener.OnRecyclerClickListener {
+
     private val TAG = "MainActivity"
 
     private val flickrRecyclerViewAdapter = FlickrRecyclerViewAdapter(ArrayList())
@@ -32,28 +30,22 @@ class MainActivity : BaseActivity(), GetRawData.OnDownloadComplete,
         recycler_view.addOnItemTouchListener(RecyclerItemClickListener(this, recycler_view, this))
         recycler_view.adapter = flickrRecyclerViewAdapter
 
-<<<<<<< HEAD
-=======
-        val url = createUri("https://api.flickr.com/services/feeds/photos_public.gne", "android,oreo","en-us", true)
-        val getRawData = GetRawData(this)
-        getRawData.execute(url)
-
->>>>>>> e6e072bfe9680f8a298294b094213d25589d5f08
         Log.d(TAG, "onCreate ends")
     }
 
     override fun onItemClick(view: View, position: Int) {
-        Log.d(TAG, ".onItemClick starts")
+        Log.d(TAG, ".onItemClick: starts")
         Toast.makeText(this, "Normal tap at position $position", Toast.LENGTH_SHORT).show()
     }
 
     override fun onItemLongClick(view: View, position: Int) {
-        Log.d(TAG, ".onItemLongClick starts")
+        Log.d(TAG, ".onItemLongClick: starts")
+//        Toast.makeText(this, "Long tap at position $position", Toast.LENGTH_SHORT).show()
         val photo = flickrRecyclerViewAdapter.getPhoto(position)
-        if (photo != null){
-        val intent = Intent(this, PhotoDetailsActivity::class.java)
-        intent.putExtra(PHOTO_TRANSFER, photo)
-        startActivity(intent)
+        if (photo != null) {
+            val intent = Intent(this, PhotoDetailsActivity::class.java)
+            intent.putExtra(PHOTO_TRANSFER, photo)
+            startActivity(intent)
         }
     }
 
@@ -83,14 +75,10 @@ class MainActivity : BaseActivity(), GetRawData.OnDownloadComplete,
         // as you specify a parent activity in AndroidManifest.xml.
         Log.d(TAG, "onOptionsItemSelected called")
         return when (item.itemId) {
-<<<<<<< HEAD
             R.id.action_search -> {
                 startActivity(Intent(this, SearchActivity::class.java))
                 true
             }
-=======
-            R.id.action_settings -> true
->>>>>>> e6e072bfe9680f8a298294b094213d25589d5f08
             else -> super.onOptionsItemSelected(item)
         }
     }
@@ -120,10 +108,9 @@ class MainActivity : BaseActivity(), GetRawData.OnDownloadComplete,
     override fun onError(exception: Exception) {
         Log.e(TAG, "onError called with ${exception.message}")
     }
-<<<<<<< HEAD
 
     override fun onResume() {
-        Log.d(TAG, "onResume starts")
+        Log.d(TAG, ".onResume starts")
         super.onResume()
 
         val sharedPref = PreferenceManager.getDefaultSharedPreferences(applicationContext)
@@ -134,8 +121,7 @@ class MainActivity : BaseActivity(), GetRawData.OnDownloadComplete,
             val getRawData = GetRawData(this)
             getRawData.execute(url)
         }
+
         Log.d(TAG, ".onResume: ends")
     }
-=======
->>>>>>> e6e072bfe9680f8a298294b094213d25589d5f08
 }

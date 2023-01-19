@@ -12,27 +12,22 @@ class PhotoDetailsActivity : BaseActivity() {
 
         activateToolBar(true)
 
-        val photo = intent.getSerializableExtra(PHOTO_TRANSFER) as Photo
-<<<<<<< HEAD
+//        val photo = intent.getSerializableExtra(PHOTO_TRANSFER) as Photo
+        val photo = intent.extras!!.getParcelable<Photo>(PHOTO_TRANSFER) as Photo
 
-//        photo_title.text = "Title" + photo.title
-//        photo_tags.text = "Tags" + photo.tags
-
-        photo_title.text = resources.getString(R.string.photo_title_text,photo.title)
+//        photo_title.text = "Title: " + photo.title
+        photo_title.text = resources.getString(R.string.photo_title_text, photo.title)
+//        photo_tags.text = "Tags: " + photo.tags
         photo_tags.text = resources.getString(R.string.photo_tags_text, photo.tags)
+
         photo_author.text = photo.author
 
+//        photo_author.text = resources.getString(R.string.photo_author_text, "my", "red", "car")
 
-=======
-        photo_title.text = photo.title
-        photo_tags.text = photo.tags
-        photo_author.text = photo.author
-
->>>>>>> e6e072bfe9680f8a298294b094213d25589d5f08
         Picasso.with(this).load(photo.link)
-            .error(R.drawable.placeholder)
-            .placeholder(R.drawable.placeholder)
-            .into(photo_image)
+                .error(R.drawable.placeholder)
+                .placeholder(R.drawable.placeholder)
+                .into(photo_image)
     }
-}
 
+}

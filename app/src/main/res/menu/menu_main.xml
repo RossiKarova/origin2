@@ -3,15 +3,8 @@
       xmlns:tools="http://schemas.android.com/tools"
       tools:context="academy.learnprogramming.flickrbrowser.MainActivity">
     <item
-<<<<<<< HEAD
         android:id="@+id/action_search"
         android:icon="@android:drawable/ic_menu_search"
         android:title="@string/action_search"
-        app:showAsAction="ifRoom" />
-=======
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never"/>
->>>>>>> e6e072bfe9680f8a298294b094213d25589d5f08
+        app:showAsAction="ifRoom"/>
 </menu>
